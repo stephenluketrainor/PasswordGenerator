@@ -1,0 +1,282 @@
+body {
+  background-color: #121117;
+  color: #58575F;
+  font-size: 1rem;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+
+
+/* --------------Titles + Fonts---------- */
+
+.main-title {
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 5rem;
+}
+
+.sub-title {
+  font-size: 0.85rem;
+  color: white;
+  padding: 0.5rem 0;
+  margin: .25rem 0;
+}
+
+.password-length {
+  font-size: 1.5rem;
+  color:#A4FFAF;
+}
+
+.strength-title {
+  font-size: 1rem;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+#password-strength {
+  font-size: 1rem;
+  color:#58575F;
+}
+
+.password-text {
+  font-size: 1.5rem;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+  text-align: center;
+}
+
+/* ----------Alignment within columns------------- */
+.justify-start {
+  text-align: left;
+}
+
+.justify-end {
+  text-align: right;
+}
+
+.zero-padding {
+  padding: 0;
+}
+
+/* --------------Containers---------------------- */
+
+.main-box{
+  width: 500px;
+  background-color: #24232B;
+  padding: 1rem 1.25rem;
+  margin: 1rem auto;
+}
+
+.sub-box {
+  background-color: #18171F;
+  overflow: hidden;
+  margin: 1rem 0;
+
+}
+
+/* -----------------Buttons & Sliders-------------------- */
+
+.generate-password {
+  background-color: #A3FFAB;
+  width:100%;
+  margin: 1.25rem 0;
+  padding: 0.8rem 0;
+  font-weight: bold;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition-opacity: 0.2s;
+  margin: 1rem 0;
+}
+
+.generate-password:hover {
+  opacity: 1;
+}
+
+.generate-password-clicked {
+  background-color: #24232B;
+  color: #A3FFAB;
+  border: #A3FFAB 1px solid;
+}
+
+#slider {
+  -webkit-appearance:none;
+  width:100%;
+  height:7px;
+  outline:none;
+  background: linear-gradient(90deg, #A3FFAB 49%, #18171F 50%);
+  box-shadow: 1px 1px 4px black;
+  border-radius: 3px;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition-opacity: 0.2s;
+  margin: 1rem 0;
+}
+
+#slider:hover{
+  opacity:1;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  border: white 1px solid;
+  cursor: pointer;
+}
+
+#slider:active::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background: #24232B;
+  border-radius: 50%;
+  border: white 1px solid;
+  cursor: pointer;
+}
+
+#slider::moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  border: white 1px solid;
+  cursor: pointer;
+}
+
+#slider:active::moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #24232B;
+  border-radius: 50%;
+  border: white 1px solid;
+  cursor: pointer;
+}
+
+
+/* --------------Checkmark Styling -------------------- */
+
+
+        .main {
+            display: block;
+            position: relative;
+            width:60%;
+            cursor:pointer;
+            font-size: 0.85rem;
+            color: white;
+            padding-left: 2rem ;
+            margin: 1.25rem 0;
+        }
+
+        /* Hide the default checkbox */
+        input[type=checkbox] {
+            visibility: hidden;
+        }
+
+        /* Creating a custom checkbox
+        based on demand */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #24232B;
+            border: white solid 1px;
+        }
+
+        /* Specify the background color to be
+        shown when hovering over checkbox */
+        .main:hover input ~.checkmark  {
+            border-color: #A3FFAB;
+        }
+
+        /* Specify the background color to be
+        shown when checkbox is active */
+        .main input:active ~ .checkmark {
+            background-color: #fcec35;
+        }
+
+        /* Specify the background color to be
+        shown when checkbox is checked */
+        .main input:checked ~ .checkmark {
+            background-color: #A3FFAB;
+        }
+
+        /* Checkmark to be shown in checkbox */
+        /* It is not be shown when not checked */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Display checkmark when checked */
+        .main input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        /* Styling the checkmark using webkit */
+        /* Rotated the rectangle by 45 degree and
+        showing only two border to make it look
+        like a tickmark */
+        .main .checkmark:after {
+            left: 5px;
+            bottom: 4px;
+            width: 7px;
+            height: 13px;
+            border: solid #24232B;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+/* ---------------Images/Icons------------------- */
+
+.copy-symbol {
+  width:20px;
+  color: white;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition-opacity: 0.2s;
+  cursor: pointer;
+}
+
+.copy-symbol:hover {
+  opacity: 1;
+}
+
+.copy-symbol-clicked {
+  filter: invert(88%) sepia(9%) saturate(1548%) hue-rotate(68deg) brightness(102%) contrast(104%);
+}
+
+.strength-indicator {
+  height:100%;
+  width:15px;
+  color: #58575F;
+  margin: 0 -3px 0 -3px;;
+}
+
+#custom-tooltip {
+    display: none;
+    margin-left: 40px;
+    padding: 5px 12px;
+    background-color: #000000df;
+    border-radius: 4px;
+    color: #fff;
+}
